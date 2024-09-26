@@ -15,6 +15,9 @@ public class RemarkCommandParserTest {
     private RemarkCommandParser parser = new RemarkCommandParser();
     private final String nonEmptyRemark = "Some remark.";
 
+    /**
+     * Tests parsing valid inputs with an index
+     */
     @Test
     public void parse_indexSpecified_success() {
         // have remark
@@ -29,6 +32,9 @@ public class RemarkCommandParserTest {
         assertParseSuccess(parser, userInput, expectedCommand);
     }
 
+    /**
+     * Tests parsing invalid inputs with missing compulsory fields
+     */
     @Test
     public void parse_missingCompulsoryField_failure() {
         String expectedMessage = String.format(MESSAGE_INVALID_COMMAND_FORMAT, RemarkCommand.MESSAGE_USAGE);
