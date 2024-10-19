@@ -6,11 +6,20 @@ import java.util.Set;
 import seedu.address.model.person.Person;
 
 public class Wedding {
+    //TODO: create class for WeddingName
     private final String name;
     private final Set<Person> contacts = new HashSet<>();
 
     public Wedding(String name, Set<Person> contacts) {
         this.name = name;
         this.contacts.addAll(contacts);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Set<Person> getContacts() {
+        return contacts;
     }
 }
