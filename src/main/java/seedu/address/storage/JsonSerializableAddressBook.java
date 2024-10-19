@@ -29,12 +29,13 @@ class JsonSerializableAddressBook {
      */
     @JsonCreator
     public JsonSerializableAddressBook(@JsonProperty("persons") List<JsonAdaptedPerson> persons,
-                                       @JsonProperty("wedding") List<JsonAdaptedPerson> wedding) {
+                                       @JsonProperty("wedding") List<JsonAdaptedWedding> weddings) {
         this.persons.addAll(persons);
         this.weddings.addAll(weddings);
     }
 
     /**
+     * TODO
      * Converts a given {@code ReadOnlyAddressBook} into this class for Jackson use.
      *
      * @param source future changes to this will not affect the created {@code JsonSerializableAddressBook}.
@@ -44,6 +45,7 @@ class JsonSerializableAddressBook {
     }
 
     /**
+     * TODO
      * Converts this address book into the model's {@code AddressBook} object.
      *
      * @throws IllegalValueException if there were any data constraints violated.
